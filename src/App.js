@@ -1,35 +1,24 @@
 import logo from "./logo.svg";
 import "./App.css";
+import TroisiemmeComposant, {
+  PremierComposant,
+  ComposantBonjour,
+} from "./components/ui/PremierComposant/PremierComposant";
+import Header from "./components/container/Header/Header";
 
 function App() {
-  let utilisateur = { prenom: "Julien", nom: "Djemai" };
-
-  function PremierComposant() {
-    return <p>Notre premier compsant!</p>;
-  }
-
-  function ComposantBonjour({ user, isPermis }) {
-    return (
-      <div>
-        <span> {user.prenom} </span>
-        <span>{user.nom}</span>
-        <p>{isPermis ? "Vous pouvez conduire" : "Prendre le bus"}</p>
-      </div>
-    );
-  }
+  let utilisateur = {
+    prenom: "Samy",
+    nom: "Djemai",
+    hobbies: ["Programmation", "Graphisme", "Dessin"],
+  };
 
   return (
     <div className='App'>
-      <header className='App-header'>
-        <img src={logo} className='App-logo' alt='logo' />
-        <p>Bonjour, bienvenu sur react!</p>
-        <p>{utilisateur.prenom}</p>
-        {PremierComposant()}
-        <PremierComposant />
-
-        {/* {ComposantBonjour(utilisateur)} */}
-        <ComposantBonjour user={utilisateur} isPermis={true} />
-      </header>
+      <Header title='Une application avec React!' />
+      <PremierComposant />
+      <ComposantBonjour user={utilisateur} isPermis={false} />
+      <TroisiemmeComposant />
     </div>
   );
 }

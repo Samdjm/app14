@@ -9,7 +9,8 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 5s ease-in-out;
+    transform-origin: 50% 50%;
   }
 }
 
@@ -22,6 +23,8 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  perspective-origin: 25% 25%;
+  perspective: 800px 200px;
 }
 
 .App-link {
@@ -29,10 +32,16 @@
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  0% {
+    transform: rotateY(0deg);
   }
-  to {
-    transform: rotate(360deg);
+  30% {
+    transform: rotateY(210deg);
+  }
+  60% {
+    transform: rotateY(150deg);
+  }
+  100% {
+    transform: rotateY(360deg);
   }
 }
