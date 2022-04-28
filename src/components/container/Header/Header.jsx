@@ -6,6 +6,8 @@ export default function Header({ title }) {
     { routePath: "/", routeName: "Home" },
     { routePath: "/profil", routeName: "Profil" },
     { routePath: "/routine", routeName: "Routine" },
+    { routePath: "/counter", routeName: "Compteur" },
+    { routePath: "/auth", routeName: "Login" },
   ];
 
   return (

@@ -4,6 +4,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./components/page/Home/Home";
 import Profil from "./components/page/Profil/Profil";
 import Routine from "./components/page/Routine/Routine";
+import Counter from "./components/page/Counter/Counter";
+import Auth from "./components/page/Auth/Auth";
 
 function App() {
   let utilisateur = {
@@ -41,6 +43,8 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/profil' element={<Profil user={utilisateur} />} />
           <Route path='/routine' element={<Routine />} />
+          <Route path='/counter' element={<Counter />} />
+          <Route path='/auth' element={<Auth />} />
         </Routes>
       </BrowserRouter>
     </div>
