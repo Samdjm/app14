@@ -2,7 +2,12 @@ import logo from "../../../logo.svg";
 import styles from "./Header.module.css";
 import { NavLink } from "react-router-dom";
 export default function Header({ title }) {
-  console.log(styles);
+  const pages = [
+    { routePath: "/", routeName: "Home" },
+    { routePath: "/profil", routeName: "Profil" },
+    { routePath: "/routine", routeName: "Routine" },
+  ];
+
   return (
     <header className={styles.container}>
       <nav className={styles.nav}>
@@ -11,22 +16,19 @@ export default function Header({ title }) {
         </NavLink>
 
         <div>
-          <NavLink
-            className={({ isActive }) =>
-              isActive ? styles.navItemActive : styles.navItem
-            }
-            to='/'
-          >
-            Home
-          </NavLink>
-          <NavLink
-            className={({ isActive }) =>
-              isActive ? styles.navItemActive : styles.navItem
-            }
-            to='/profil'
-          >
-            Profil
-          </NavLink>
+          {pages.map(function (route) {
+            return (
+              <NavLink
+                key={route.routePath}
+                className={({ isActive }) =>
+                  isActive ? styles.navItemActive : styles.navItem
+                }
+                to={route.routePath}
+              >
+                {route.routeName}
+              </NavLink>
+            );
+          })}
         </div>
       </nav>
     </header>

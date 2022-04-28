@@ -3,6 +3,7 @@ import Header from "./components/container/Header/Header";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./components/page/Home/Home";
 import Profil from "./components/page/Profil/Profil";
+import Routine from "./components/page/Routine/Routine";
 
 function App() {
   let utilisateur = {
@@ -39,6 +40,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/profil' element={<Profil user={utilisateur} />} />
+          <Route path='/routine' element={<Routine />} />
         </Routes>
       </BrowserRouter>
     </div>

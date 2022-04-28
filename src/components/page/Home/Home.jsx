@@ -1,5 +1,7 @@
 //rfc: React Functional Composant
 
+import Button from "../../ui/Button/Button";
+
 export default function Home() {
   function clicked() {
     console.log("Clickeeedd!!!");
@@ -9,7 +11,9 @@ export default function Home() {
     <div>
       <p> Home</p>
 
-      <button onClick={clicked}>Cliquer!</button>
+      <Button action={clicked}>Click!</Button>
+
+      {/* <button onClick={clicked}>Cliquer!</button> */}
     </div>
   );
 }
