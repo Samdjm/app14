@@ -7,3 +7,26 @@
   font-weight: bold;
   font-size: 30px;
 }
+.imageLogo {
+  width: 64px;
+}
+.nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.navItem {
+  color: whitesmoke;
+  margin: auto 10px;
+  font-size: 18px;
+  text-decoration: none;
+}
+.navItemActive {
+  margin: auto 10px;
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #61dafb;
+  border-bottom: solid 1px #61dafb;
+}

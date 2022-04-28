@@ -1,11 +1,8 @@
-import logo from "./logo.svg";
 import "./App.css";
-import TroisiemmeComposant, {
-  PremierComposant,
-  ComposantBonjour,
-} from "./components/ui/PremierComposant/PremierComposant";
 import Header from "./components/container/Header/Header";
-import User from "./components/container/User/User";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./components/page/Home/Home";
+import Profil from "./components/page/Profil/Profil";
 
 function App() {
   let utilisateur = {
@@ -37,13 +34,13 @@ function App() {
 
   return (
     <div className='App'>
-      <Header title='Une application avec React!' />
-
-      <User user={utilisateur} age={10} />
-
-      {/* <PremierComposant />
-      <ComposantBonjour user={utilisateur} isPermis={false} />
-      <TroisiemmeComposant /> */}
+      <BrowserRouter>
+        <Header title='Une application avec React!' />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/profil' element={<Profil user={utilisateur} />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
