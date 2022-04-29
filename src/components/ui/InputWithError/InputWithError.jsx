@@ -1,4 +1,4 @@
-import React from "react";
+import { FaEye } from "react-icons/fa";
 
 export default function InputWithError({
   holder,
@@ -15,6 +15,7 @@ export default function InputWithError({
         onChange={action}
         type={type}
       />
+      <FaEye />
       <p style={{ color: "red", fontSize: "12px" }}>{error}</p>
     </div>
   );

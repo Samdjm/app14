@@ -36,7 +36,7 @@ export default function LoginForm() {
     setPasswordInput("");
   }
 
-  //Two way binding: l'input est lié dan les deux sens
+  //Two way binding: l'input est lié dans les deux sens
   //4- Ajouter les éléments inputs/boutons, et les lier au variables et fonctions:
   return (
     <>
