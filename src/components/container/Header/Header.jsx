@@ -1,7 +1,15 @@
 import logo from "../../../logo.svg";
 import styles from "./Header.module.css";
 import { NavLink } from "react-router-dom";
+import { useState } from "react";
+import Button from "../../ui/Button/Button";
 export default function Header({ title }) {
+  const [isMenuShown, setIsMenuShown] = useState(false);
+
+  function toggleMenu() {
+    setIsMenuShown(!isMenuShown);
+  }
+
   const pages = [
     { routePath: "/", routeName: "Home" },
     { routePath: "/profil", routeName: "Profil" },
@@ -16,8 +24,11 @@ export default function Header({ title }) {
         <NavLink to='/'>
           <img className={styles.imageLogo} src={logo} alt='Logo React' />
         </NavLink>
-
-        <div>
+        <Button action={toggleMenu}>Menu</Button>
+        <div
+          className={styles.itemsContainer}
+          style={{ left: isMenuShown ? "0" : "-100%" }}
+        >
           {pages.map(function (route) {
             return (
               <NavLink

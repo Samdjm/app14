@@ -41,13 +41,15 @@ function App() {
       <div className='App'>
         <BrowserRouter>
           <Header title='Une application avec React!' />
-          <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/profil' element={<Profil />} />
-            <Route path='/routine' element={<Routine />} />
-            <Route path='/counter' element={<Counter />} />
-            <Route path='/auth' element={<Auth />} />
-          </Routes>
+          <div style={{ paddingTop: "90px" }}>
+            <Routes>
+              <Route path='/' element={<Home />} />
+              <Route path='/profil' element={<Profil />} />
+              <Route path='/routine' element={<Routine />} />
+              <Route path='/counter' element={<Counter />} />
+              <Route path='/auth' element={<Auth />} />
+            </Routes>
+          </div>
         </BrowserRouter>
       </div>
     </UserContext.Provider>

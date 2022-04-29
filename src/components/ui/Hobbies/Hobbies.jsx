@@ -47,3 +47,9 @@ export default function Hobbies() {
     </table>
   );
 }
+
+//1 Rendre la navbar responsive
+//2 Modifier user et afficher avatar
+
+//3 Comment faire des requeste vers des backend
+//4 Formik et yup

@@ -12,6 +12,18 @@ export default function User() {
       >
         <Hobbies />
       </MenuSecret>
+      <MenuSecret
+        labelOpen={"Cacher les cours"}
+        labelClose={"Afficher les cours"}
+      >
+        <Hobbies />
+      </MenuSecret>
+      <MenuSecret
+        labelOpen={"Cacher les cours"}
+        labelClose={"Afficher les cours"}
+      >
+        <Hobbies />
+      </MenuSecret>
     </div>
   );
 }
