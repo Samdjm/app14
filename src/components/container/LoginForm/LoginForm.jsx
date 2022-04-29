@@ -39,7 +39,7 @@ export default function LoginForm() {
   //Two way binding: l'input est lié dans les deux sens
   //4- Ajouter les éléments inputs/boutons, et les lier au variables et fonctions:
   return (
-    <>
+    <div style={{ maxWidth: "500px", padding: "10%" }}>
       <h2>Connectez-vous</h2>
       <InputWithError
         holder={"Email"}
@@ -57,7 +57,7 @@ export default function LoginForm() {
         error={passwordError}
       />
       <Button action={login}>Valider</Button>
-    </>
+    </div>
   );
 }
 
