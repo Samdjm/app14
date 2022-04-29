@@ -3,7 +3,7 @@ import LoginForm from "../../container/LoginForm/LoginForm";
 import SignUpForm from "../../container/SignUpForm/SignUpForm";
 
 export default function Auth() {
-  const [isLogin, setIsLogin] = useState(true);
+  const [isLogin, setIsLogin] = useState(false);
 
   function toggleLogin() {
     setIsLogin(!isLogin);
