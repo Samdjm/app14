@@ -6,6 +6,7 @@ import Profil from "./components/page/Profil/Profil";
 import Routine from "./components/page/Routine/Routine";
 import Counter from "./components/page/Counter/Counter";
 import Auth from "./components/page/Auth/Auth";
+import { UserContext } from "./contexts/UserContext";
 
 function App() {
   let utilisateur = {
@@ -36,18 +37,20 @@ function App() {
   };
 
   return (
-    <div className='App'>
-      <BrowserRouter>
-        <Header title='Une application avec React!' />
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/profil' element={<Profil user={utilisateur} />} />
-          <Route path='/routine' element={<Routine />} />
-          <Route path='/counter' element={<Counter />} />
-          <Route path='/auth' element={<Auth />} />
-        </Routes>
-      </BrowserRouter>
-    </div>
+    <UserContext.Provider value={utilisateur}>
+      <div className='App'>
+        <BrowserRouter>
+          <Header title='Une application avec React!' />
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/profil' element={<Profil />} />
+            <Route path='/routine' element={<Routine />} />
+            <Route path='/counter' element={<Counter />} />
+            <Route path='/auth' element={<Auth />} />
+          </Routes>
+        </BrowserRouter>
+      </div>
+    </UserContext.Provider>
   );
 }
 

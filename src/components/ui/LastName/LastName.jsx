@@ -1,7 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { useContext } from "react";
+import { UserContext } from "../../../contexts/UserContext";
 
-function LastName({ lastName }) {
+function LastName() {
+  const { nom } = useContext(UserContext);
+
   return (
     <span
       style={{
@@ -11,7 +15,7 @@ function LastName({ lastName }) {
         margin: "0 5px",
       }}
     >
-      {lastName}
+      {nom}
     </span>
   );
 }

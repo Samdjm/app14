@@ -1,9 +1,9 @@
 import User from "../../container/User/User";
 
-export default function Profil({ user }) {
+export default function Profil() {
   return (
     <div>
-      <User user={user} />
+      <User />
     </div>
   );
 }

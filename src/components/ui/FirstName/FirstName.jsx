@@ -1,4 +1,9 @@
-export default function FirstName({ firstName }) {
+import { useContext } from "react";
+import { UserContext } from "../../../contexts/UserContext";
+
+export default function FirstName() {
+  const { prenom } = useContext(UserContext);
+
   return (
     <span
       style={{
@@ -8,7 +13,7 @@ export default function FirstName({ firstName }) {
         margin: "0 5px",
       }}
     >
-      {firstName}
+      {prenom}
     </span>
   );
 }

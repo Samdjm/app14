@@ -1,6 +1,10 @@
 import React from "react";
+import { useContext } from "react";
 import styles from "./Hobbies.module.css";
-export default function Hobbies({ cours }) {
+import { UserContext } from "../../../contexts/UserContext";
+export default function Hobbies() {
+  const { cours } = useContext(UserContext);
+
   return (
     <table className={styles.tableContainer}>
       <thead className={styles.tableHeader}>
